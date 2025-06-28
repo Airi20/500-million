@@ -25,20 +25,7 @@ function App() {
       </p>
 
       <JumpGame />
-
-      <button
-        onClick={() => alert("やっぱやめる？無理")}
-        style={{
-          marginTop: 30,
-          padding: "8px 16px",
-          backgroundColor: "#ccc",
-          border: "none",
-          borderRadius: 4,
-          cursor: "pointer",
-        }}
-      >
-        やっぱやめる
-      </button>
+      {/* 一番下のボタンは削除したよ */}
     </div>
   );
 }
