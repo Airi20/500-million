@@ -17,7 +17,7 @@ export default function BillionYearsButton() {
     <div
       style={{
         textAlign: "center",
-        marginTop: "10px",
+        marginTop: "4px",
         padding: "20px",
         maxWidth: "600px",
         margin: "auto",
