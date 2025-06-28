@@ -23,7 +23,6 @@ export default function BillionYearsButton() {
         margin: "auto",
       }}
     >
-      <h1 style={{ fontSize: "19px" }}>🌀 行間調節って難しい</h1>
 
       {!started ? (
         <>
@@ -50,7 +49,7 @@ export default function BillionYearsButton() {
 
           {quitAttempted && (
             <p style={{ color: "red", marginTop: "10px", fontWeight: "bold" }}>
-              やっぱダメです（戻れません）
+              ダメです（戻れません）
             </p>
           )}
         </>
