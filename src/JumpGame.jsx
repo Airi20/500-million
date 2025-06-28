@@ -30,7 +30,7 @@ export default function BillionYearsButton() {
           <p style={{ fontSize: "18px" }}>押したら最後、逃げられない🔞</p>
           <button
             onClick={() => setStarted(true)}
-            style={{ fontSize: "24px", padding: "10px 30px", margin: "8px 0" }}
+            style={{ fontSize: "20px", padding: "10px 30px", margin: "8px 0" }}
           >
             スタート
           </button>
