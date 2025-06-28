@@ -1,76 +1,84 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 
-export default function ClickSquareGame() {
-  const [alive, setAlive] = useState(false);
-  const [message, setMessage] = useState("");
-  const startTimeRef = useRef(null);
+export default function BillionYearsButton() {
+  const [started, setStarted] = useState(false);
+  const [secondsLeft, setSecondsLeft] = useState(BigInt("15778800000000000"));
+  const [quitAttempted, setQuitAttempted] = useState(false);
 
-  const startGame = () => {
-    setMessage("");
-    setAlive(true);
-    startTimeRef.current = Date.now();
-  };
-
-  const handleClick = () => {
-    if (!alive) return;
-
-    const elapsed = (Date.now() - startTimeRef.current) / 1000;
-    const diff = Math.abs(elapsed - 5);
-
-    if (diff <= 0.2) {
-      setMessage(`おけ！まだ食える！誤差 ${diff.toFixed(2)}秒`);
-    } else {
-      setMessage(`加熱すればいけんじゃね？ 誤差 ${diff.toFixed(2)}秒`);
-    }
-    setAlive(false);
-  };
+  useEffect(() => {
+    if (!started) return;
+    const timer = setInterval(() => {
+      setSecondsLeft((prev) => (prev > 0n ? prev - 1n : 0n));
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [started]);
 
   return (
     <div
       style={{
-        width: 200,
-        height: 250,
-        border: "3px solid black",
-        position: "relative",
-        margin: "50px auto",
-        userSelect: "none",
         textAlign: "center",
-        paddingTop: 20,
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
+        marginTop: "30px",
+        padding: "20px",
+        maxWidth: "600px",
+        margin: "auto",
       }}
     >
-      {!alive && (
-        <button
-          onClick={startGame}
-          style={{
-            marginBottom: 20,
-            padding: "10px 20px",
-            fontSize: 16,
-            cursor: "pointer",
-          }}
-        >
-          スタート
-        </button>
+      <h1 style={{ fontSize: "32px" }}>🌀 5億年ボタン</h1>
+
+      {!started ? (
+        <>
+          <p style={{ fontSize: "18px" }}>押したら最後、逃げられない。</p>
+          <button
+            onClick={() => setStarted(true)}
+            style={{ fontSize: "24px", padding: "10px 30px", margin: "20px" }}
+          >
+            スタート
+          </button>
+        </>
+      ) : (
+        <>
+          <p style={{ fontSize: "20px" }}>
+            残り秒数：{secondsLeft.toLocaleString()} 秒
+          </p>
+
+          <button
+            onClick={() => setQuitAttempted(true)}
+            style={{ fontSize: "16px", marginTop: "20px" }}
+          >
+            やっぱりやめる
+          </button>
+
+          {quitAttempted && (
+            <p style={{ color: "red", marginTop: "10px", fontWeight: "bold" }}>
+              やっぱダメです（戻れません）
+            </p>
+          )}
+        </>
       )}
 
-      {alive && (
-        <div
-          onClick={handleClick}
-          style={{
-            fontSize: 50,
-            cursor: "pointer",
-            userSelect: "none",
-            lineHeight: 1,
-          }}
-        >
-          🍙
-        </div>
-      )}
-
-      {!alive && message && <p style={{ marginTop: 30 }}>{message}</p>}
+      {/* 理系の解説 */}
+      <div
+        style={{
+          backgroundColor: "#f0f0f0",
+          marginTop: "40px",
+          padding: "15px",
+          borderRadius: "10px",
+          fontSize: "14px",
+          lineHeight: "1.6em",
+          textAlign: "left",
+        }}
+      >
+        <strong>なぜ 15,778,800,000,000,000 秒？</strong>
+        <ul>
+          <li>5億年 = 500,000,000 年</li>
+          <li>1年 = 365.25 日（うるう年込み）</li>
+          <li>1日 = 86,400 秒</li>
+          <li>
+            → 500,000,000 × 365.25 × 86,400 ={" "}
+            <strong>15,778,800,000,000,000 秒</strong>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
