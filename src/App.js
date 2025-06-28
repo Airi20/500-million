@@ -19,11 +19,11 @@ function App() {
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       }}
     >
-      <h1 style={{ marginBottom: 4, fontSize: "1.5rem", lineHeight: 1.1 }}>
+      <h1 style={{ marginBottom: 4, fontSize: "1.7rem", lineHeight: 0.8 }}>
   ５億年ボタン疑似体験 🎮
 </h1>
 
-<p style={{ fontSize: "0.75rem", marginBottom: 8, lineHeight: 0.8 }}>
+<p style={{ fontSize: "0.75rem", marginBottom: 8, lineHeight: 0.3 }}>
   5億年 = 約15,778,800,000,000,000秒<br />
   （5億 × 365日 × 24時間 × 60分 × 60秒）
 </p>
