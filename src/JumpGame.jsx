@@ -17,13 +17,13 @@ export default function BillionYearsButton() {
     <div
       style={{
         textAlign: "center",
-        marginTop: "30px",
+        marginTop: "20px",
         padding: "20px",
         maxWidth: "600px",
         margin: "auto",
       }}
     >
-      <h1 style={{ fontSize: "25px" }}>🌀 5億年ボタン</h1>
+      <h1 style={{ fontSize: "20px" }}>🌀 5億年ボタン</h1>
 
       {!started ? (
         <>
