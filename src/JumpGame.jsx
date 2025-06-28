@@ -23,14 +23,14 @@ export default function BillionYearsButton() {
         margin: "auto",
       }}
     >
-      <h1 style={{ fontSize: "32px" }}>🌀 5億年ボタン</h1>
+      <h1 style={{ fontSize: "25px" }}>🌀 5億年ボタン</h1>
 
       {!started ? (
         <>
           <p style={{ fontSize: "18px" }}>押したら最後、逃げられない。</p>
           <button
             onClick={() => setStarted(true)}
-            style={{ fontSize: "24px", padding: "10px 30px", margin: "20px" }}
+            style={{ fontSize: "24px", padding: "10px 30px", margin: "8px 0" }}
           >
             スタート
           </button>
@@ -60,7 +60,7 @@ export default function BillionYearsButton() {
       <div
         style={{
           backgroundColor: "#f0f0f0",
-          marginTop: "40px",
+          marginTop: "20px",
           padding: "15px",
           borderRadius: "10px",
           fontSize: "14px",
