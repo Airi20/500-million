@@ -36,7 +36,7 @@ export default function BillionYearsButton() {
         </>
       ) : (
         <>
-          <p style={{ fontSize: "18px" }}>
+          <p style={{ fontSize: "16px" }}>
             残り秒数：{secondsLeft.toLocaleString()} 秒
           </p>
 
