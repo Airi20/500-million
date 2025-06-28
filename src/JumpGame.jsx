@@ -36,7 +36,7 @@ export default function BillionYearsButton() {
         </>
       ) : (
         <>
-          <p style={{ fontSize: "20px" }}>
+          <p style={{ fontSize: "18px" }}>
             残り秒数：{secondsLeft.toLocaleString()} 秒
           </p>
 
@@ -49,7 +49,7 @@ export default function BillionYearsButton() {
 
           {quitAttempted && (
             <p style={{ color: "red", marginTop: "10px", fontWeight: "bold" }}>
-              ダメです（戻れません）
+              ダメです（戻れないよ）
             </p>
           )}
         </>
