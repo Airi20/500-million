@@ -36,13 +36,13 @@ export default function BillionYearsButton() {
         </>
       ) : (
         <>
-          <p style={{ fontSize: "16px" }}>
+          <p style={{ fontSize: "14px" }}>
             残り秒数：{secondsLeft.toLocaleString()} 秒
           </p>
 
           <button
             onClick={() => setQuitAttempted(true)}
-            style={{ fontSize: "16px", marginTop: "20px" }}
+            style={{ fontSize: "14px", marginTop: "20px" }}
           >
             やっぱりやめる
           </button>
