@@ -63,7 +63,7 @@ export default function BillionYearsButton() {
           marginTop: "20px",
           padding: "15px",
           borderRadius: "10px",
-          fontSize: "14px",
+          fontSize: "12px",
           lineHeight: "1.6em",
           textAlign: "left",
         }}
