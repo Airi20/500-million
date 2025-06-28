@@ -23,7 +23,7 @@ export default function BillionYearsButton() {
         margin: "auto",
       }}
     >
-      <h1 style={{ fontSize: "20px" }}>🌀 行間調節って難しい</h1>
+      <h1 style={{ fontSize: "19px" }}>🌀 行間調節って難しい</h1>
 
       {!started ? (
         <>
