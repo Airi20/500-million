@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 export default function BillionYearsButton() {
   const [started, setStarted] = useState(false);
-  const [secondsLeft, setSecondsLeft] = useState(BigInt("15778800000000000"));
+  const [secondsLeft, setSecondsLeft] = useState(15778800000000000n); // ← BigIntリテラル！
   const [quitAttempted, setQuitAttempted] = useState(false);
 
   useEffect(() => {
