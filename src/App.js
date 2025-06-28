@@ -8,13 +8,13 @@ function App() {
       style={{
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
+        justifyContent: "flex-start",  // 上寄せに変更
         alignItems: "center",
-        height: "100vh",
-        padding: 6,          // もっと詰める
+        minHeight: "100vh",
+        padding: 6,
         boxSizing: "border-box",
         textAlign: "center",
-        maxWidth: 320,       // さらに狭める
+        maxWidth: 320,
         margin: "0 auto",
         fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
       }}
